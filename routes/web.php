@@ -39,19 +39,30 @@ Route::group(['middleware' =>['auth']], function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/koordinator/pengajuan_sk/lihatsk', 'App\Http\Controllers\KoordinatorController@lihatsk')->name('lihatsk');
 
 Route::get('/mahasiswa/pengajuan_sk/tambah', 'App\Http\Controllers\MahasiswaController@tambah')->name('tambah');
 Route::post('/mahasiswa/pengajuan_sk/simpan', 'App\Http\Controllers\MahasiswaController@simpan')->name('simpan');
-Route::get('/koordinator/pengajuan_sk/editsk{id}', 'App\Http\Controllers\KoordinatorController@editsk')->name('editsk');
-Route::put('/koordinator/pengajuan_sk/updatesk{id}', 'App\Http\Controllers\KoordinatorController@updatesk')->name('updatesk');
+Route::get('/mahasiswa/pengajuan_prakp/tambah1', 'App\Http\Controllers\MahasiswaController@tambah1')->name('tambah1');
+Route::post('/mahasiswa/pengajuan_prakp/simpan1', 'App\Http\Controllers\MahasiswaController@simpan1')->name('simpan1');
+Route::get('/mahasiswa/pengajuan_kp/tambah2', 'App\Http\Controllers\MahasiswaController@tambah2')->name('tambah2');
+Route::post('/mahasiswa/pengajuan_kp/simpan2', 'App\Http\Controllers\MahasiswaController@simpan2')->name('simpan2');
+
+//============================================================================================================================================//
+
+Route::get('/koordinator/pengajuan_sk/lihatsk', 'App\Http\Controllers\KoordinatorController@lihatsk')->name('lihatsk');
+Route::get('/koordinator/pengajuan_sk/editsk/{id}', 'App\Http\Controllers\KoordinatorController@editsk')->name('editsk');
+Route::put('/koordinator/pengajuan_sk/updatesk/{id}', 'App\Http\Controllers\KoordinatorController@updatesk')->name('updatesk');
 Route::post('/koordinator/pengajuan_sk/searchsk', 'App\Http\Controllers\KoordinatorController@searchsk')->name('searchsk');
 
+Route::get('/koordinator/pengajuan_prakp/lihatprakp', 'App\Http\Controllers\KoordinatorController@lihatprakp')->name('lihatprakp');
+Route::get('/koordinator/pengajuan_prakp/editprakp/{id}', 'App\Http\Controllers\KoordinatorController@editprakp')->name('editprakp');
+Route::put('/koordinator/pengajuan_prakp/updateprakp/{id}', 'App\Http\Controllers\KoordinatorController@updateprakp')->name('updateprakp');
+Route::post('/koordinator/pengajuan_prakp/searchprakp', 'App\Http\Controllers\KoordinatorController@searchprakp')->name('searchprakp');
 
+Route::get('/koordinator/pengajuan_kp/lihatkp', 'App\Http\Controllers\KoordinatorController@lihatkp')->name('lihatkp');
+Route::get('/koordinator/pengajuan_kp/editkp/{id}', 'App\Http\Controllers\KoordinatorController@editkp')->name('editkp');
+Route::put('/koordinator/pengajuan_kp/updatekp/{id}', 'App\Http\Controllers\KoordinatorController@updatekp')->name('updatekp');
+Route::post('/koordinator/pengajuan_kp/searchkp', 'App\Http\Controllers\KoordinatorController@searchkp')->name('searchkp');
 
+//============================================================================================================================================//
 
-
-
-
-Route::get('/pengajuan_prakp/ajukan', 'App\Http\Controllers\MahasiswaController@pengajuanprakp')->name('pengajuanprakp');
-Route::get('/pengajuan_kp/ajukan', 'App\Http\Controllers\MahasiswaController@pengajuankp]')->name('pengajuankp');

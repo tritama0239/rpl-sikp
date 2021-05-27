@@ -24,25 +24,25 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Verifikasi Berkas Pengajuan Mahasiswa
+                            Berkas Pengajuan
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_sk/lihatsk') }}">Surat Keterangan</a></li>
-                            <li><a class="dropdown-item" href="#">Pra Kerja Praktik</a></li>
-                            <li><a class="dropdown-item" href="#">Kerja Praktik</a></li>
+                            <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_prakp/lihatprakp') }}">Pra Kerja Praktik</a></li>
+                            <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_kp/lihatkp') }}">Kerja Praktik</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Set Jadwal Ujian</a>
+                        <a class="nav-link" href="#">Jadwal Ujian</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Daftar Registrasi Kerja Praktik</a>
+                        <a class="nav-link" href="#">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Set Batas Pelaksanaan Kerja Praktik</a>
+                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">

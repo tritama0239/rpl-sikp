@@ -28,8 +28,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{url('/mahasiswa/pengajuan_sk/tambah') }}">Surat Keterangan</a></li>
-                            <li><a class="dropdown-item" href="#">Pra Kerja Praktik</a></li>
-                            <li><a class="dropdown-item" href="#">Kerja Praktik</a></li>
+                            <li><a class="dropdown-item" href="{{url('/mahasiswa/pengajuan_prakp/tambah1') }}">Pra Kerja Praktik</a></li>
+                            <li><a class="dropdown-item" href="{{url('/mahasiswa/pengajuan_kp/tambah2') }}">Kerja Praktik</a></li>
                         </ul>
                     </li>
 

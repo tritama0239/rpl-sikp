@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" align="center"><h3>Pengajuan Kerja Praktik</h3></div>
+                <div class="card-header" align="center"><h3>Pengajuan Pra Kerja Praktik</h3></div>
 
                 <div class="card-body">
-                <form method="POST" action="/mahasiswa/pengajuan_kp/simpan2">
+                <form method="POST" action="/mahasiswa/pengajuan_prakp/simpan1">
             @csrf
                 <div class="col-md-6">
 
@@ -23,13 +23,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Judul KP</label>
-                        <input type="year" class="form-control" name="judul_kp" id="judul_kp" >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Status KP</label>
-                        <input type="text" class="form-control" name="sts_kp" id="sts_kp" >
+                        <label for="" class="font-weight-bold">Status Pra KP</label>
+                        <input type="text" class="form-control" name="sts_prakp" id="sts_prakp" >
                     </div>
 
                     <div class="form-group">
@@ -109,16 +104,6 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Nomor Telepon</label>
                         <input type="text" class="form-control" name="no_tlp" id="no_tlp" >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Ujian</label>
-                        <input type="text" class="form-control" name="sts_ujian" id="sts_ujian" >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Jadwal Ujian</label>
-                        <input type="text" class="form-control" name="jdwl_ujian" id="jdwl_ujian" >
                     </div>
 
                     <div class="form-group">
