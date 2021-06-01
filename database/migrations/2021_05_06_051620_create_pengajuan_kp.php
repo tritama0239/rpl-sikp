@@ -31,7 +31,7 @@ class CreatePengajuanKp extends Migration
             $table->string('alamat');
             $table->string('no_tlp');
             $table->string('sts_ujian');
-            $table->string('jdwl_ujian');
+            $table->date('jdwl_ujian');
             $table->string('sts_verif');
             $table->timestamps();
         });

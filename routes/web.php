@@ -47,22 +47,35 @@ Route::post('/mahasiswa/pengajuan_prakp/simpan1', 'App\Http\Controllers\Mahasisw
 Route::get('/mahasiswa/pengajuan_kp/tambah2', 'App\Http\Controllers\MahasiswaController@tambah2')->name('tambah2');
 Route::post('/mahasiswa/pengajuan_kp/simpan2', 'App\Http\Controllers\MahasiswaController@simpan2')->name('simpan2');
 
+Route::get('/mahasiswa/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\MahasiswaController@lihatjdwl')->name('lihatjdwl');
+Route::get('/mahasiswa/jadwal_ujian/searchjdwl', 'App\Http\Controllers\MahasiswaController@searchjdwl')->name('searchjdwl');
+
 //============================================================================================================================================//
 
 Route::get('/koordinator/pengajuan_sk/lihatsk', 'App\Http\Controllers\KoordinatorController@lihatsk')->name('lihatsk');
 Route::get('/koordinator/pengajuan_sk/editsk/{id}', 'App\Http\Controllers\KoordinatorController@editsk')->name('editsk');
 Route::put('/koordinator/pengajuan_sk/updatesk/{id}', 'App\Http\Controllers\KoordinatorController@updatesk')->name('updatesk');
-Route::post('/koordinator/pengajuan_sk/searchsk', 'App\Http\Controllers\KoordinatorController@searchsk')->name('searchsk');
+Route::get('/koordinator/pengajuan_sk/searchsk', 'App\Http\Controllers\KoordinatorController@searchsk')->name('searchsk');
 
 Route::get('/koordinator/pengajuan_prakp/lihatprakp', 'App\Http\Controllers\KoordinatorController@lihatprakp')->name('lihatprakp');
 Route::get('/koordinator/pengajuan_prakp/editprakp/{id}', 'App\Http\Controllers\KoordinatorController@editprakp')->name('editprakp');
 Route::put('/koordinator/pengajuan_prakp/updateprakp/{id}', 'App\Http\Controllers\KoordinatorController@updateprakp')->name('updateprakp');
-Route::post('/koordinator/pengajuan_prakp/searchprakp', 'App\Http\Controllers\KoordinatorController@searchprakp')->name('searchprakp');
+Route::get('/koordinator/pengajuan_prakp/searchprakp', 'App\Http\Controllers\KoordinatorController@searchprakp')->name('searchprakp');
 
 Route::get('/koordinator/pengajuan_kp/lihatkp', 'App\Http\Controllers\KoordinatorController@lihatkp')->name('lihatkp');
 Route::get('/koordinator/pengajuan_kp/editkp/{id}', 'App\Http\Controllers\KoordinatorController@editkp')->name('editkp');
 Route::put('/koordinator/pengajuan_kp/updatekp/{id}', 'App\Http\Controllers\KoordinatorController@updatekp')->name('updatekp');
-Route::post('/koordinator/pengajuan_kp/searchkp', 'App\Http\Controllers\KoordinatorController@searchkp')->name('searchkp');
+Route::get('/koordinator/pengajuan_kp/searchkp', 'App\Http\Controllers\KoordinatorController@searchkp')->name('searchkp');
+
+Route::get('/koordinator/jadwal_ujian/tambahjdwl', 'App\Http\Controllers\KoordinatorController@tambahjdwl')->name('tambahjdwl');
+Route::post('/koordinator/jadwal_ujian/simpanjdwl', 'App\Http\Controllers\KoordinatorController@simpanjdwl')->name('simpanjdwl');
+Route::get('/koordinator/jadwal_ujian/editjdwl/{id}', 'App\Http\Controllers\KoordinatorController@editjdwl')->name('editjdwl');
+Route::put('/koordinator/jadwal_ujian/updatejdwl/{id}', 'App\Http\Controllers\KoordinatorController@updatejdwl')->name('updatejdwl');
+Route::get('/koordinator/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\KoordinatorController@lihatjdwl')->name('lihatjdwl');
+Route::get('/koordinator/jadwal_ujian/searchjdwl', 'App\Http\Controllers\KoordinatorController@searchjdwl')->name('searchjdwl');
+
 
 //============================================================================================================================================//
 
+Route::get('/dosen/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\DosenController@lihatjdwl')->name('lihatjdwl');
+Route::get('/dosen/jadwal_ujian/lihatbimbingan', 'App\Http\Controllers\DosenController@lihatbimbingan')->name('lihatbimbingan');

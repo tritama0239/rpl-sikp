@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\pengajuan_sk;
 use App\pengajuan_prakp;
 use App\pengajuan_kp;
+use App\jadwal_ujian;
 
 
 class MahasiswaController extends Controller
@@ -14,6 +15,8 @@ class MahasiswaController extends Controller
     {
         return view('v_mahasiswa');
     }
+
+    //============================================================//
 
     public function tambah()
     {
@@ -36,6 +39,8 @@ class MahasiswaController extends Controller
         ]);
         return redirect('/mahasiswa');
     }
+
+    //============================================================//
 
     public function tambah1()
     {
@@ -64,6 +69,8 @@ class MahasiswaController extends Controller
         ]);
         return redirect('/mahasiswa');
     }
+
+    //============================================================//
 
     public function tambah2()
     {
@@ -94,5 +101,13 @@ class MahasiswaController extends Controller
             'sts_verif' => $request -> sts_verif
         ]);
         return redirect('/mahasiswa');
+    }
+
+    //============================================================//
+
+    public function lihatjdwl()
+    {
+        $jdwl = jadwal_ujian::paginate(10);
+        return view('v_lihat_jdwl_mhs', ['jdwl' => $jdwl]);
     }
 }

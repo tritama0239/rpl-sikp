@@ -59,82 +59,68 @@
     </nav>
 
     <section class="jumbotron">
-    <div class="container">
-        <p><h1 align ="center">Daftar Pengajuan Kerja Praktik</h1></p><br>
-        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/koordinator/pengajuan_kp/searchkp">
-        <h1 class="mt-2 mr-3 text-muted">Search</h1>
-        <input class="form-control mr-sm-2" type="search" name="q" value="@php echo old('cari') @endphp"  placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" data-toggle="tooltip" title="Search">Cari<i class="fas fa-search" ></i></button>
-        </form>
-        <br />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" align="center"><h3>Jadwal Ujian</h3></div>
 
-        <table class="table table-hover">
-        <tr>
-        <th>No</th>
-        <th>ID SK</th>
-        <th>Semester</th>
-        <th>Tahun</th>
-        <th>Judul KP</th>
-        <th>Status Pra KP</th>
-        <th>NIM</th>
-        <th>NIK</th>
-        <th>Tools</th>
-        <th>Spesifikasi</th>
-        <th>Dokumen</th>
-        <th>Penguji</th>
-        <th>Ruang</th>
-        <th>Lembaga</th>
-        <th>Pimpinan</th>
-        <th>Alamat</th>
-        <th>Nomor Telepon</th>
-        <th>Status Ujian</th>
-        <th>Tanggal Ujian</th>
-        <th>Status Verifikasi</th>
-        </tr>
+                <div class="card-body">
+                <form method="POST" action="/koordinator/jadwal_ujian/simpanjdwl">
+            @csrf
+                <div class="col-md-6">
 
-        <!--@php
-        $no=1;
-        @endphp-->
-        @foreach($kp as $no=> $p)
-        <tr>
-        <th scope="row"><?php echo ++$no + ($kp->currentPage()-1)*$kp->perPage() ?></th>
-        <td>{{ $p->id}}</td>
-        <td>{{ $p->semester}}</td>
-        <td>{{ $p->tahun}}</td>
-        <td>{{ $p->judul_kp}}</td>
-        <td>{{ $p->sts_kp}}</td>
-        <td>{{ $p->nim}}</td>
-        <td>{{ $p->nik}}</td>
-        <td>{{ $p->tools}}</td>
-        <td>{{ $p->spesifikasi}}</td>
-        <td>{{ $p->dokumen}}</td>
-        <td>{{ $p->penguji}}</td>
-        <td>{{ $p->ruang}}</td>
-        <td>{{ $p->lembaga}}</td>
-        <td>{{ $p->pimpinan}}</td>
-        <td>{{ $p->alamat}}</td>
-        <td>{{ $p->no_tlp}}</td>
-        <td>{{ $p->sts_ujian}}</td>
-        <td>{{ $p->jdwl_ujian}}</td>
-        <td>{{ $p->sts_verif}}</td>
-        <td>
-            <a href="/koordinator/pengajuan_kp/editkp/{{ $p->id }}" class="btn btn-success" data-toggle="tooltip" title="Edit" >Verifikasi</i></a>
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Nama</label>
+                        <input type="text" class="form-control" name="nama" id="nama"  >
+                    </div>
 
-        </td>
-        </tr>
-        </tbody>
-        @endforeach
-        </table>
-        <!-- End Table -->
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">NIM</label>
+                        <input type="year" class="form-control" name="nim" id="nim" >
+                    </div>
 
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Ruangan</label>
+                        <input type="text" class="form-control" name="ruangan" id="ruangan" >
+                    </div>
 
-        <!-- Pagination -->
-        <!-- Total Data Pra KP: @php echo $kp->total() @endphp -->
-        @php echo $kp->links() @endphp
-        <!-- End Pagination -->
-    </div>
-        
-    </section>
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Pembimbing</label>
+                        <input type="text" class="form-control" name="pembimbing" id="pembimbing" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Penguji</label>
+                        <input type="text" class="form-control" name="penguji" id="penguji" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Tanggal Ujian</label>
+                        <input type="text" class="form-control" name="jdwl_ujian" id="jdwl_ujian" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Jam Mulai</label>
+                        <input type="text" class="form-control" name="jam_mulai" id="jam_mulai" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Jam Selesai</label>
+                        <input type="text" class="form-control" name="jam_slsai" id="jam_slsai" >
+                    </div>
+
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </form>
+            <!-- End Form -->
+            
+                </div>
+            </div>
+           
+</div>
+</section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
