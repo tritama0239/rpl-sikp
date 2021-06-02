@@ -26,6 +26,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="nim" class="col-md-4 col-form-label text-md-right">{{ __('NIM') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nim" type="text" class="form-control @error('nim') is-invalid @enderror" name="nim" value="{{ old('nim') }}" required autocomplete="nim" autofocus>
+
+                                @error('nim')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -62,15 +76,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('Status') }}</label>
+                            <label for="level" class="col-md-4 col-form-label text-md-right"></label>
 
                             <div class="col-md-6">
-                                <select id="level" type="level" class="form-control @error('level') is-invalid @enderror" name="level" required autocomplete="level">
-                                    <option>--Status--</option>
-                                    <option value="koordinator">Koordinator</option>
-                                    <option value="dosen">Dosen</option>
-                                    <option value="mahasiswa">Mahasiswa</option>
-                                </select>
+                                <input id="level" type="hidden" class="form-control @error('level') is-invalid @enderror" name="level" value="mahasiswa" required autocomplete="level" readonly>
+
 
                                 @error('level')
                                     <span class="invalid-feedback" role="alert">

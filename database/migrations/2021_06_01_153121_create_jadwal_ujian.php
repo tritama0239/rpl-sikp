@@ -15,9 +15,9 @@ class CreateJadwalUjian extends Migration
     {
         Schema::create('jadwal_ujian', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->string('name');
             $table->string('nim');
-            $table->string('ruangan');
+            $table->string('ruang');
             $table->string('pembimbing');
             $table->string('penguji');
             $table->date('jdwl_ujian');

@@ -63,12 +63,25 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Semester</label>
-                        <input type="text" class="form-control" name="semester" id="semester"  >
+                        <select class="form-control" name="semester" id="semester">
+                            <option>----</option>
+                            <option selected="selected" value="ganjil">Ganjil</option>
+                            <option value="genap">Genap</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Tahun</label>
-                        <input type="year" class="form-control" name="tahun" id="tahun" >
+                        <label for="" class="font-weight-bold">Tahun Ajaran</label>
+                        <select class="form-control" name="tahun" id="tahun">
+                            <option>----</option>
+                            <option selected="selected" value="2020/2021">2020/2021</option>
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2022/2023">2022/2023</option>
+                            <option value="2023/2024">2023/2024</option>
+                            <option value="2024/2025">2024/2025</option>
+                            <option value="2025/2026">2025/2026</option>
+                            <option value="2026/2027">2026/2027</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -127,7 +140,12 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Ruang</label>
-                        <input type="text" class="form-control" name="ruang" id="ruang" >
+                        <select class="form-control" name="ruang" id="ruang">
+                            <option>----</option>
+                            <option selected="selected" value="Harun">Harun</option>
+                            <option value="Rudi Budiman">Rudi Budiman</option>
+                            <option value="Tasdik">Tasdik</option>
+                        </select>
                     </div>
                     
                     <div class="form-group">
@@ -156,10 +174,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Verifikasi</label>
-                        <select class="form-control" name="sts_verif" id="sts_verif">
-                            <option value="Belum Diverifikasi">Belum Diverifikasi</option>
-                        </select>
+                        <label for="" class="font-weight-bold"></label>
+                        <input type="hidden" class="form-control" name="sts_verif" id="sts_verif" value="Belum Diverifikasi" readonly>
                     </div>
 
                     </div>

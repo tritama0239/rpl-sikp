@@ -72,7 +72,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Nama</label>
-                        <input type="text" class="form-control" name="nama" id="nama"  >
+                        <input type="text" class="form-control" name="name" id="name"  >
                     </div>
 
                     <div class="form-group">
@@ -81,8 +81,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Ruangan</label>
-                        <input type="text" class="form-control" name="ruangan" id="ruangan" >
+                        <label for="" class="font-weight-bold">Ruang</label>
+                        <select class="form-control" name="ruang" id="ruang">
+                            <option>----</option>
+                            <option value="Harun">Harun</option>
+                            <option value="Rudi Budiman">Rudi Budiman</option>
+                            <option value="Tasdik">Tasdik</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -97,17 +102,17 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Tanggal Ujian</label>
-                        <input type="text" class="form-control" name="jdwl_ujian" id="jdwl_ujian" >
+                        <input type="date" class="form-control" name="jdwl_ujian" id="jdwl_ujian" >
                     </div>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Jam Mulai</label>
-                        <input type="text" class="form-control" name="jam_mulai" id="jam_mulai" >
+                        <input type="time" class="form-control" name="jam_mulai" id="jam_mulai" >
                     </div>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Jam Selesai</label>
-                        <input type="text" class="form-control" name="jam_slsai" id="jam_slsai" >
+                        <input type="time" class="form-control" name="jam_slsai" id="jam_slsai" >
                     </div>
 
                 </div>

@@ -16,7 +16,7 @@ class CreatePengajuanSk extends Migration
         Schema::create('pengajuan_sk', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('semester');
-            $table->year('tahun');
+            $table->string('tahun');
             $table->string('nim');
             $table->string('lembaga');
             $table->string('no_tlp');

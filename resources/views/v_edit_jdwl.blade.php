@@ -83,8 +83,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Ruangan</label>
-                        <input type="text" class="form-control" name="ruangan" id="ruangan" value="{{ $jdwl->ruangan }}" >
+                        <label for="" class="font-weight-bold">Ruang</label>
+                        <select class="form-control" name="ruang" id="ruang">
+                            <option>----</option>
+                            <option selected="selected" value="Harun">Harun</option>
+                            <option value="Rudi Budiman">Rudi Budiman</option>
+                            <option value="Tasdik">Tasdik</option>
+                        </select>
                     </div>
                     
                     <div class="form-group">

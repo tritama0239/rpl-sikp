@@ -71,7 +71,7 @@
         <table class="table table-hover">
         <tr>
         <th>No</th>
-        <th>ID SK</th>
+        <th>ID</th>
         <th>Semester</th>
         <th>Tahun</th>
         <th>NIM</th>

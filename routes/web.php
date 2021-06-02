@@ -78,4 +78,6 @@ Route::get('/koordinator/jadwal_ujian/searchjdwl', 'App\Http\Controllers\Koordin
 //============================================================================================================================================//
 
 Route::get('/dosen/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\DosenController@lihatjdwl')->name('lihatjdwl');
-Route::get('/dosen/jadwal_ujian/lihatbimbingan', 'App\Http\Controllers\DosenController@lihatbimbingan')->name('lihatbimbingan');
+Route::get('/dosen/jadwal_ujian/searchjdwl', 'App\Http\Controllers\DosenController@searchjdwl')->name('searchjdwl');
+Route::get('/dosen/daftar_bimbingan/lihatbimbingan', 'App\Http\Controllers\DosenController@lihatbimbingan')->name('lihatbimbingan');
+Route::get('/dosen/daftar_bimbingan/searchbimbingan', 'App\Http\Controllers\DosenController@searchbimbingan')->name('searchbimbingan');

@@ -16,7 +16,7 @@ class CreatePengajuanPrakp extends Migration
         Schema::create('pengajuan_prakp', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('semester');
-            $table->year('tahun');
+            $table->string('tahun');
             $table->string('sts_prakp');
             $table->string('nim');
             $table->string('nik');

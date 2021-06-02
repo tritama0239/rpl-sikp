@@ -126,9 +126,9 @@ class KoordinatorController extends Controller
     {
         jadwal_ujian::create([
             'id' => $request -> id,
-            'nama' => $request -> nama,
+            'name' => $request -> name,
             'nim' => $request -> nim,
-            'ruangan' => $request -> ruangan,
+            'ruang' => $request -> ruang,
             'pembimbing' => $request -> pembimbing,
             'penguji' => $request -> penguji,
             'jdwl_ujian' => $request -> jdwl_ujian,
@@ -146,7 +146,7 @@ class KoordinatorController extends Controller
 
     public function updatejdwl($id, Request $request) {
         $jdwl = jadwal_ujian::find($id);
-        $jdwl->ruangan = $request->ruangan;
+        $jdwl->ruang = $request->ruang;
         $jdwl->jdwl_ujian = $request->jdwl_ujian;
         $jdwl->jam_mulai = $request->jam_mulai;
         $jdwl->jam_slsai = $request->jam_slsai;

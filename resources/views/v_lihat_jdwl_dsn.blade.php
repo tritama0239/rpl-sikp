@@ -57,7 +57,7 @@
         <table class="table table-hover">
         <tr>
         <th>No</th>
-        <th>ID Jadwal</th>
+        <th>ID</th>
         <th>Nama</th>
         <th>NIM</th>
         <th>Ruangan</th>
@@ -75,9 +75,9 @@
         <tr>
         <th scope="row"><?php echo ++$no + ($jdwl->currentPage()-1)*$jdwl->perPage() ?></th>
         <td>{{ $p->id}}</td>
-        <td>{{ $p->nama}}</td>
+        <td>{{ $p->name}}</td>
         <td>{{ $p->nim}}</td>
-        <td>{{ $p->ruangan}}</td>
+        <td>{{ $p->ruang}}</td>
         <td>{{ $p->pembimbing}}</td>
         <td>{{ $p->penguji}}</td>
         <td>{{ $p->jdwl_ujian}}</td>

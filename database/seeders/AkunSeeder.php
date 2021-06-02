@@ -17,18 +17,21 @@ class AkunSeeder extends Seeder
         $user = [
         [
             'name' => 'Andhika',
+            'nim' => '00000001',
             'email' => 'andhika@gmail.com',
             'level' => 'koordinator',
-            'password' => bcrypt('Andhika1234')
+            'password' => bcrypt('andhika1234')
         ],
         [
             'name' => 'Argo',
+            'nim' => '11110001',
             'email' => 'argo@staff.ukdw.ac.id',
             'level' => 'dosen',
             'password' => bcrypt('argo1234')
         ],
         [
             'name' => 'Riswan',
+            'nim' => '72180239',
             'email' => 'riswan.sulia@si.ukdw.ac.id',
             'level' => 'mahasiswa',
             'password' => bcrypt('Tritama9719')

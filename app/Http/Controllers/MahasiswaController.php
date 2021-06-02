@@ -110,4 +110,12 @@ class MahasiswaController extends Controller
         $jdwl = jadwal_ujian::paginate(10);
         return view('v_lihat_jdwl_mhs', ['jdwl' => $jdwl]);
     }
+
+    public function searchjdwl(Request $request) {
+        $cari = $request->q;
+        $jdwl= jadwal_ujian::
+        where('nim','like',"%".$cari."%")
+        ->paginate();
+        return view('v_lihat_jdwl_mhs',['jdwl' => $jdwl]);
+    }
 }

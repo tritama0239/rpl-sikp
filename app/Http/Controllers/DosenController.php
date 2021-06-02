@@ -25,4 +25,20 @@ class DosenController extends Controller
         $bim = daftar_bimbingan::paginate(10);
         return view('v_lihat_bimbingan', ['bim' => $bim]);
     }
+
+    public function searchjdwl(Request $request) {
+        $cari = $request->q;
+        $jdwl= jadwal_ujian::
+        where('nim','like',"%".$cari."%")
+        ->paginate();
+        return view('v_lihat_jdwl_dsn',['jdwl' => $jdwl]);
+    }
+
+    public function searchbimbingan(Request $request) {
+        $cari = $request->q;
+        $bim= jadwal_ujian::
+        where('nim','like',"%".$cari."%")
+        ->paginate();
+        return view('v_lihat_bimbingan',['bim' => $bim]);
+    }
 }
