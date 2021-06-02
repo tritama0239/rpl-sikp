@@ -16,22 +16,22 @@ class AkunSeeder extends Seeder
     {
         $user = [
         [
-            'name' => 'koordinator',
-            'email' => 'koordinator@gmail.com',
+            'name' => 'Andhika',
+            'email' => 'andhika@gmail.com',
             'level' => 'koordinator',
-            'password' => bcrypt('koordinator123')
+            'password' => bcrypt('Andhika1234')
         ],
         [
-            'name' => 'dosen',
-            'email' => 'dosen@staff.ukdw.ac.id',
+            'name' => 'Argo',
+            'email' => 'argo@staff.ukdw.ac.id',
             'level' => 'dosen',
-            'password' => bcrypt('dosen123')
+            'password' => bcrypt('argo1234')
         ],
         [
-            'name' => 'mahasiswa',
-            'email' => 'mahasiswa@si.ukdw.ac.id',
+            'name' => 'Riswan',
+            'email' => 'riswan.sulia@si.ukdw.ac.id',
             'level' => 'mahasiswa',
-            'password' => bcrypt('mahasiswa123')
+            'password' => bcrypt('Tritama9719')
         ]
     ];
     foreach ($user as $key => $value) {

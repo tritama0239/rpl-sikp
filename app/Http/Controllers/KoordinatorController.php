@@ -131,12 +131,12 @@ class KoordinatorController extends Controller
             'ruangan' => $request -> ruangan,
             'pembimbing' => $request -> pembimbing,
             'penguji' => $request -> penguji,
-            'tgl_ujian' => $request -> tgl_ujian,
+            'jdwl_ujian' => $request -> jdwl_ujian,
             'jam_mulai' => $request -> jam_mulai,
             'jam_slsai' => $request -> jam_slsai
             
         ]);
-        return redirect('/koordinator');
+        return redirect('/koordinator/jadwal_ujian/lihatjdwl');
     }
 
     public function editjdwl($id) {
