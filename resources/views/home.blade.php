@@ -11,14 +11,28 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #00cba9">
         <div class="container">
-            <a class="navbar-brand" href="{{url('')}}"><img src="{{ asset('image/rpl-logo.png') }}" alt="" width="148" height="68"/></a>
+    
+            <a class="navbar-brand" href="{{url('home') }}"><img src="{{ asset('image/rpl-logo.png') }}" alt="" width="148" height="68"/></a>
+            <script>
+                var q={{ Auth::user()->level }};
+            function pilah(){
+                if (q = 'mahasiswa'){
+                <a href="{{url('/mahasiswa')}}"></a>
+                } else if(q = 'dosen'){
+                    <a href="{{url('/dosen')}}"></a>
+                } else(Auth::user()->level = 'koordinator'){
+                    <a href="{{url('/koordinator')}}"></a>
+                }
+            }
+            </script>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('') }}">
+                        <a class="nav-link" href="{{url('home') }}">
                             {{ Auth::user()->name }}
                         </a>
                     </li>

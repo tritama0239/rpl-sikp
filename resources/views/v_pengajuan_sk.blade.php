@@ -34,7 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Jadwal</a>
+                        <a class="nav-link" href="{{url('/mahasiswa/jadwal_ujian/lihatjdwl') }}">Jadwal</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('logout') }}"
@@ -86,7 +86,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">NIM</label>
-                        <input type="text" class="form-control" name="nim" id="nim" >
+                        <input type="text" class="form-control" name="nim" id="nim" value="{{ Auth::user()->nim }}" readonly>
                     </div>
 
                     <div class="form-group">
@@ -136,7 +136,7 @@
                         <label for="" class="font-weight-bold">Dokumen</label>
                         <input type="file" class="form-control" name="dokumen" id="dokumen" required='required' multiple >
                         <p style="color: red">Format File yang Diperbolehkan .png | .jpeg | .pdf </p>
-                    </div>
+                    </div></form>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold"></label>

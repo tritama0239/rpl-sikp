@@ -38,11 +38,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/jadwal_ujian/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">
@@ -71,20 +71,20 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Nama</label>
-                        <input type="text" class="form-control" name="name" id="name"  >
+                        <label for="" class="font-weight-bold">NIM</label>
+                        <input type="text" onkeyup="autoisi()" class="form-control" name="nim" id="nim" >
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">NIM</label>
-                        <input type="year" class="form-control" name="nim" id="nim" >
+                        <label for="" class="font-weight-bold">Nama</label>
+                        <input type="text" class="form-control" name="name" id="name" >
                     </div>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Ruang</label>
-                        <select class="form-control" name="ruang" id="ruang">
-                            <option>----</option>
-                            <option value="Harun">Harun</option>
+                        <select class="form-control" name="ruang" id="ruang" >
+                            <option selected="selected" value="Harun">Harun</option>
                             <option value="Rudi Budiman">Rudi Budiman</option>
                             <option value="Tasdik">Tasdik</option>
                         </select>
@@ -119,6 +119,24 @@
                 
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </form>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript">
+            function autoisi(){
+                var nim = $("#nim").val();
+                $.ajax({
+                    url: 'ajax.php',
+                    data:"nim="+nim ,
+                }).success(function (data) {
+                    var json = data,
+                    obj = JSON.parse(json);
+                    $('#name').val(obj.name);
+                    $('#ruang').val(obj.ruang);
+                    $('#penguji').val(obj.penguji);
+                    $('#jdwl_ujian').val(obj.jdwl_ujian);
+                });
+            }
+            </script>
             <!-- End Form -->
             
                 </div>

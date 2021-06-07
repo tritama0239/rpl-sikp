@@ -63,40 +63,25 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" align="center"><h3>Daftar Pengajuan Pra Kerja Praktik</h3></div>
+                <div class="card-header" align="center"><h3>Set Batas Pelaksanaan Kerja Praktik</h3></div>
 
                 <div class="card-body">
-                <form method="POST" action="/koordinator/pengajuan_prakp/updateprakp/{{ $prakp->id }}">
+                <form method="POST" action="/koordinator/batas_pelaksanaan/updatebatas/{{ $batas->id }}">
             @csrf
             @method('PUT')
-            <input type="hidden" class="form-control" name="id" id="id" value="{{ $prakp->id }}">
+            <input type="hidden" class="form-control" name="id" id="id" value="{{ $batas->id }}">
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Pra KP</label>
-                        <select class="form-control" name="sts_prakp" id="sts_prakp">
-                            <option value="Sedang Menjalankan" @php if(($prakp->dokumen)=='Sedang Menjalankan') echo 'selected' @endphp>Sedang Menjalankan</option>
-                            <option value="Selesai"@php if(($prakp->dokumen)=='Selesai') echo 'selected' @endphp>Selesai</option>                        
-                        </select>
+                        <label for="" class="font-weight-bold">NIM</label>
+                        <input type="text" class="form-control" name="nim" id="nim" value="{{ $batas->nim }}" disabled >
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Penguji</label>
-                        <select class="form-control" name="penguji" id="penguji">
-                            <option value="Argo" @php if(($prakp->dokumen)=='Argo') echo 'selected' @endphp>Argo</option>
-                            <option value="Yetli"@php if(($prakp->dokumen)=='Yetli') echo 'selected' @endphp>Yetli</option>
-                            <option value="Katon" @php if(($prakp->dokumen)=='Katon') echo 'selected' @endphp>Katon</option>
-                            <option value="Umi"@php if(($prakp->dokumen)=='Umi') echo 'selected' @endphp>Umi</option>                       
-                        </select>
+                        <label for="" class="font-weight-bold">Batas Pelaksanaan</label>
+                        <input type="date" class="form-control" name="bts_pelaksanaan" id="bts_pelaksanaan" value="{{ $batas->bts_pelaksanaan }}"  >
                     </div>
                     
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Verifikasi</label>
-                        <select class="form-control" name="sts_verif" id="sts_verif">
-                            <option value="Diterima" @php if(($prakp->dokumen)=='Diterima') echo 'selected' @endphp>Terima</option>
-                            <option value="Ditolak"@php if(($prakp->dokumen)=='Ditolak') echo 'selected' @endphp>Tolak</option>                        
-                        </select>
-                    </div>
 
                 </div>
 
@@ -114,3 +99,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
+

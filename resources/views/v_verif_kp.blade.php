@@ -38,11 +38,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">
@@ -71,11 +71,36 @@
             @method('PUT')
             <input type="hidden" class="form-control" name="id" id="id" value="{{ $kp->id }}">
                 <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Status KP</label>
+                        <select class="form-control" name="sts_kp" id="sts_kp">
+                            <option selected="selected" value="Sedang Menjalankan" @php if(($kp->dokumen)=='Sedang Menjalankan') echo 'selected' @endphp>Sedang Menjalankan</option>
+                            <option value="Selesai"@php if(($kp->dokumen)=='Selesai') echo 'selected' @endphp>Selesai</option>                        
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Penguji</label>
+                        <select class="form-control" name="penguji" id="penguji">
+                            <option selected="selected" value="Argo" @php if(($kp->dokumen)=='Argo') echo 'selected' @endphp>Argo</option>
+                            <option value="Yetli"@php if(($kp->dokumen)=='Yetli') echo 'selected' @endphp>Yetli</option>
+                            <option value="Katon" @php if(($kp->dokumen)=='Katon') echo 'selected' @endphp>Katon</option>
+                            <option value="Umi"@php if(($kp->dokumen)=='Umi') echo 'selected' @endphp>Umi</option>                       
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Status Ujian</label>
+                        <select class="form-control" name="sts_ujian" id="sts_ujian">
+                            <option selected="selected" value="Belum Ujian" @php if(($kp->dokumen)=='Belum Ujian') echo 'selected' @endphp>Belum Ujian</option>
+                            <option value="Sudah Ujian"@php if(($kp->dokumen)=='Sudah Ujian') echo 'selected' @endphp>Sudah Ujian</option>                        
+                        </select>
+                    </div>
                     
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Status Verifikasi</label>
                         <select class="form-control" name="sts_verif" id="sts_verif">
-                            <option>--Belum Diverifikasi--</option>
                             <option value="Diterima" @php if(($kp->dokumen)=='Diterima') echo 'selected' @endphp>Terima</option>
                             <option value="Ditolak"@php if(($kp->dokumen)=='Ditolak') echo 'selected' @endphp>Tolak</option>                        
                         </select>

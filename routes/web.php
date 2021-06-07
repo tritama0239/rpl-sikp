@@ -74,6 +74,13 @@ Route::put('/koordinator/jadwal_ujian/updatejdwl/{id}', 'App\Http\Controllers\Ko
 Route::get('/koordinator/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\KoordinatorController@lihatjdwl')->name('lihatjdwl');
 Route::get('/koordinator/jadwal_ujian/searchjdwl', 'App\Http\Controllers\KoordinatorController@searchjdwl')->name('searchjdwl');
 
+Route::get('/koordinator/list_registrasi/lihatregis', 'App\Http\Controllers\KoordinatorController@lihatregis')->name('lihatregis');
+Route::get('/koordinator/list_registrasi/searchregis', 'App\Http\Controllers\KoordinatorController@searchregis')->name('searchregis');
+
+Route::get('/koordinator/batas_pelaksanaan/editbatas/{id}', 'App\Http\Controllers\KoordinatorController@editbatas')->name('editbatas');
+Route::put('/koordinator/batas_pelaksanaan/updatebatas/{id}', 'App\Http\Controllers\KoordinatorController@updatebatas')->name('updatebatas');
+Route::get('/koordinator/batas_pelaksanaan/lihatbatas', 'App\Http\Controllers\KoordinatorController@lihatbatas')->name('lihatbatas');
+Route::get('/koordinator/batas_pelaksanaan/searchbatas', 'App\Http\Controllers\KoordinatorController@searchbatas')->name('searchbatas');
 
 //============================================================================================================================================//
 

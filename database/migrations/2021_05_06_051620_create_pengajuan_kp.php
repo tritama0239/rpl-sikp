@@ -32,6 +32,7 @@ class CreatePengajuanKp extends Migration
             $table->string('no_tlp');
             $table->string('sts_ujian');
             $table->date('jdwl_ujian');
+            $table->date('bts_pelaksanaan');
             $table->string('sts_verif');
             $table->timestamps();
         });

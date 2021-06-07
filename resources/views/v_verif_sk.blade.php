@@ -38,11 +38,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">
@@ -75,7 +75,6 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Status Verifikasi</label>
                         <select class="form-control" name="sts_verif" id="sts_verif">
-                            <option>--Belum Diverifikasi--</option>
                             <option value="Diterima" @php if(($sk->dokumen)=='Diterima') echo 'selected' @endphp>Terima</option>
                             <option value="Ditolak"@php if(($sk->dokumen)=='Ditolak') echo 'selected' @endphp>Tolak</option>                        
                         </select>

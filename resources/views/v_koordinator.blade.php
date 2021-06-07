@@ -38,11 +38,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">

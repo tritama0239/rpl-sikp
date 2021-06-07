@@ -34,7 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Jadwal</a>
+                        <a class="nav-link" href="{{url('/mahasiswa/jadwal_ujian/lihatjdwl') }}">Jadwal</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('logout') }}"
@@ -73,7 +73,6 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Tahun Ajaran</label>
                         <select class="form-control" name="tahun" id="tahun">
-                            <option>----</option>
                             <option selected="selected" value="2020/2021">2020/2021</option>
                             <option value="2021/2022">2021/2022</option>
                             <option value="2022/2023">2022/2023</option>
@@ -86,12 +85,12 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Status Pra KP</label>
-                        <input type="text" class="form-control" name="sts_prakp" id="sts_prakp" >
+                        <input type="hidden" class="form-control" name="sts_prakp" id="sts_prakp" value="-" readonly>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">NIM</label>
-                        <input type="text" class="form-control" name="nim" id="nim" >
+                        <input type="text" class="form-control" name="nim" id="nim" value="{{ Auth::user()->nim }}" readonly>
                     </div>
 
                     <div class="form-group">
@@ -141,7 +140,6 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Ruang</label>
                         <select class="form-control" name="ruang" id="ruang">
-                            <option>----</option>
                             <option selected="selected" value="Harun">Harun</option>
                             <option value="Rudi Budiman">Rudi Budiman</option>
                             <option value="Tasdik">Tasdik</option>
@@ -155,7 +153,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Penguji</label>
-                        <input type="text" class="form-control" name="penguji" id="penguji" >
+                        <input type="hidden" class="form-control" name="penguji" id="penguji" value="-" readonly>
                     </div>
 
                     <div class="form-group">

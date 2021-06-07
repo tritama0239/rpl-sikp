@@ -38,11 +38,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
                     </li>
 
                     <li class="nav-item">
@@ -85,10 +85,9 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Ruang</label>
                         <select class="form-control" name="ruang" id="ruang">
-                            <option>----</option>
-                            <option selected="selected" value="Harun">Harun</option>
-                            <option value="Rudi Budiman">Rudi Budiman</option>
-                            <option value="Tasdik">Tasdik</option>
+                            <option value="Harun" @php if(($jdwl->dokumen)=='Harun') echo 'selected' @endphp>Harun</option>
+                            <option value="Rudi Budiman"@php if(($jdwl->dokumen)=='Rudi Budiman') echo 'selected' @endphp>Rudi Budiman</option>
+                            <option value="Tasdik" @php if(($jdwl->dokumen)=='Tasdik') echo 'selected' @endphp>Tasdik</option>                      
                         </select>
                     </div>
                     

@@ -7,6 +7,8 @@ use App\pengajuan_sk;
 use App\pengajuan_prakp;
 use App\pengajuan_kp;
 use App\jadwal_ujian;
+use App\list_registrasi;
+use App\batas_pelaksanaan;
 
 class KoordinatorController extends Controller
 {
@@ -58,6 +60,8 @@ class KoordinatorController extends Controller
 
     public function updateprakp($id, Request $request) {
         $prakp = pengajuan_prakp::find($id);
+        $prakp->sts_prakp = $request->sts_prakp;
+        $prakp->penguji = $request->penguji;
         $prakp->sts_verif = $request->sts_verif;
         $prakp->save();
         
@@ -87,6 +91,9 @@ class KoordinatorController extends Controller
 
     public function updatekp($id, Request $request) {
         $kp = pengajuan_kp::find($id);
+        $kp->sts_kp = $request->sts_kp;
+        $kp->penguji = $request->penguji;
+        $kp->sts_ujian = $request->sts_ujian;
         $kp->sts_verif = $request->sts_verif;
         $kp->save();
         
@@ -153,6 +160,51 @@ class KoordinatorController extends Controller
         $jdwl->save();
         
      return redirect("/koordinator/jadwal_ujian/lihatjdwl");
+    }
+
+    //============================================================//
+
+    public function lihatregis()
+        {
+            $reg = list_registrasi::paginate(10);
+            return view('v_lihat_regis', ['reg' => $reg]);
+        }
+
+    public function searchregis(Request $request) {
+        $cari = $request->q;
+        $reg= list_registrasi::
+        where('nim','like',"%".$cari."%")
+        ->paginate();
+        return view('v_lihat_regis',['reg' => $reg]);
+    }
+
+    //============================================================//
+
+    public function lihatbatas()
+    {
+        $batas = batas_pelaksanaan::paginate(10);
+        return view('v_lihat_batas_pelaksanaan', ['batas' => $batas]);
+    }
+
+    public function searchbatas(Request $request) {
+        $cari = $request->q;
+        $batas= batas_pelaksanaan::
+        where('nim','like',"%".$cari."%")
+        ->paginate();
+        return view('v_lihat_batas_pelaksanaan',['batas' => $batas]);
+    }
+
+    public function editbatas($id) {
+        $batas = pengajuan_kp::find($id);
+        return view('v_set_batas_pelaksanaan', ['batas' => $batas]);
+    }
+
+    public function updatebatas($id, Request $request) {
+        $batas = pengajuan_kp::find($id);
+        $batas->bts_pelaksanaan = $request->bts_pelaksanaan;
+        $batas->save();
+        
+     return redirect("/koordinator/batas_pelaksanaan/lihatbatas");
     }
 
 }

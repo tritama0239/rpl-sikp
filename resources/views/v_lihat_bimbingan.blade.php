@@ -11,38 +11,24 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #00cba9">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/koordinator')}}"><img src="{{ asset('image/rpl-logo.png') }}" alt="" width="148" height="68"/></a>
+            <a class="navbar-brand" href="{{url('/dosen')}}"><img src="{{ asset('image/rpl-logo.png') }}" alt="" width="148" height="68"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/koordinator') }}">
+                        <a class="nav-link" href="{{url('/dosen') }}">
                             {{ Auth::user()->name }}
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Berkas Pengajuan
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_sk/lihatsk') }}">Surat Keterangan</a></li>
-                            <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_prakp/lihatprakp') }}">Pra Kerja Praktik</a></li>
-                            <li><a class="dropdown-item" href="{{url('/koordinator/pengajuan_kp/lihatkp') }}">Kerja Praktik</a></li>
-                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/dosen/daftar_bimbingan/lihatbimbingan') }}">Bimbingan</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/koordinator/jadwal_ujian/lihatjdwl') }}">Jadwal Ujian</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/koordinator/batas_pelaksanaan/lihatbatas') }}">Batas Pelaksanaan</a>
+                        <a class="nav-link" href="{{url('/dosen/jadwal_ujian/lihatjdwl') }}">Jadwal Ujian</a>
                     </li>
 
                     <li class="nav-item">
@@ -59,45 +45,34 @@
     </nav>
 
     <section class="jumbotron">
-        
     <div class="container">
-        <p><h1 align ="center">Jadwal Ujian</h1></p><br>
-        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/koordinator/jadwal_ujian/searchjdwl">
+        <p><h1 align ="center">Daftar Bimbingan Dosen</h1></p><br>
+        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/dosen/daftar_bimbingan/searchbimbingan">
         <h1 class="mt-2 mr-3 text-muted">Search</h1>
         <input class="form-control mr-sm-2" type="search" name="q" value="@php echo old('cari') @endphp"  placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" data-toggle="tooltip" title="Search">Cari<i class="fas fa-search" ></i></button>
         </form>
         <br />
-            <a href="/koordinator/jadwal_ujian/tambahjdwl" class="btn btn-success" data-toggle="tooltip" title="New" >[+] Jadwal</i></a>
+
         <table class="table table-hover">
         <tr>
         <th>No</th>
-        <th>ID</th>
-        <th>Nama</th>
         <th>NIM</th>
-        <th>Ruangan</th>
+        <th>Nama</th>
         <th>Pembimbing</th>
-        <th>Penguji</th>
-        <th>Tanggal</th>
-        <th>Jam Mulai</th>
-        <th>Jam Selesai</th>
+        <th>Jadwal Ujian</th>
         </tr>
 
         <!--@php
         $no=1;
         @endphp-->
-        @foreach($jdwl as $no=> $p)
+        @foreach($bim as $no=> $p)
         <tr>
-        <th scope="row"><?php echo ++$no + ($jdwl->currentPage()-1)*$jdwl->perPage() ?></th>
-        <td>{{ $p->id}}</td>
-        <td>{{ $p->name}}</td>
+        <th scope="row"><?php echo ++$no + ($bim->currentPage()-1)*$bim->perPage() ?></th>
         <td>{{ $p->nim}}</td>
-        <td>{{ $p->ruang}}</td>
+        <td>{{ $p->name}}</td>
         <td>{{ $p->pembimbing}}</td>
-        <td>{{ $p->penguji}}</td>
         <td>{{ $p->jdwl_ujian}}</td>
-        <td>{{ $p->jam_mulai}}</td>
-        <td>{{ $p->jam_slsai}}</td>
         <td>
             
         </td>
@@ -109,11 +84,11 @@
 
 
         <!-- Pagination -->
-        <!-- Total Data Jadwal: @php echo $jdwl->total() @endphp -->
-        @php echo $jdwl->links() @endphp
+        <!-- Total Data Jadwal: @php echo $bim->total() @endphp -->
+        @php echo $bim->links() @endphp
         <!-- End Pagination -->
     </div>
-    
+        
     </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>

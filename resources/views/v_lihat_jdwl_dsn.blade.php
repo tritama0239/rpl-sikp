@@ -24,7 +24,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">List Bimbingan</a>
+                        <a class="nav-link" href="{{url('/dosen/daftar_bimbingan/lihatbimbingan') }}">Bimbingan</a>
                     </li>
 
                     <li class="nav-item">
@@ -47,7 +47,7 @@
     <section class="jumbotron">
     <div class="container">
         <p><h1 align ="center">Jadwal Ujian</h1></p><br>
-        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/mahasiswa/jadwal_ujian/searchjdwl">
+        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/dosen/jadwal_ujian/searchjdwl">
         <h1 class="mt-2 mr-3 text-muted">Search</h1>
         <input class="form-control mr-sm-2" type="search" name="q" value="@php echo old('cari') @endphp"  placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" data-toggle="tooltip" title="Search">Cari<i class="fas fa-search" ></i></button>

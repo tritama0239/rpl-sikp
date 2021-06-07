@@ -59,58 +59,51 @@
     </nav>
 
     <section class="jumbotron">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" align="center"><h3>Daftar Pengajuan Pra Kerja Praktik</h3></div>
+        
+    <div class="container">
+        <p><h1 align ="center">List Registrasi</h1></p><br>
+        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/koordinator/list_registrasi/searchregis">
+        <h1 class="mt-2 mr-3 text-muted">Search</h1>
+        <input class="form-control mr-sm-2" type="search" name="q" value="@php echo old('cari') @endphp"  placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" data-toggle="tooltip" title="Search">Cari<i class="fas fa-search" ></i></button>
+        </form>
+        <br />
+        <table class="table table-hover">
+        <tr>
+        <th>No</th>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Status Pra KP</th>
+        <th>Status KP</th>
+        </tr>
 
-                <div class="card-body">
-                <form method="POST" action="/koordinator/pengajuan_prakp/updateprakp/{{ $prakp->id }}">
-            @csrf
-            @method('PUT')
-            <input type="hidden" class="form-control" name="id" id="id" value="{{ $prakp->id }}">
-                <div class="col-md-6">
-
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Pra KP</label>
-                        <select class="form-control" name="sts_prakp" id="sts_prakp">
-                            <option value="Sedang Menjalankan" @php if(($prakp->dokumen)=='Sedang Menjalankan') echo 'selected' @endphp>Sedang Menjalankan</option>
-                            <option value="Selesai"@php if(($prakp->dokumen)=='Selesai') echo 'selected' @endphp>Selesai</option>                        
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Penguji</label>
-                        <select class="form-control" name="penguji" id="penguji">
-                            <option value="Argo" @php if(($prakp->dokumen)=='Argo') echo 'selected' @endphp>Argo</option>
-                            <option value="Yetli"@php if(($prakp->dokumen)=='Yetli') echo 'selected' @endphp>Yetli</option>
-                            <option value="Katon" @php if(($prakp->dokumen)=='Katon') echo 'selected' @endphp>Katon</option>
-                            <option value="Umi"@php if(($prakp->dokumen)=='Umi') echo 'selected' @endphp>Umi</option>                       
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Verifikasi</label>
-                        <select class="form-control" name="sts_verif" id="sts_verif">
-                            <option value="Diterima" @php if(($prakp->dokumen)=='Diterima') echo 'selected' @endphp>Terima</option>
-                            <option value="Ditolak"@php if(($prakp->dokumen)=='Ditolak') echo 'selected' @endphp>Tolak</option>                        
-                        </select>
-                    </div>
-
-                </div>
-
-            </div>
-                
-                <button type="submit" class="btn btn-primary">Confirm</button>
-            </form>
-            <!-- End Form -->
+        <!--@php
+        $no=1;
+        @endphp-->
+        @foreach($reg as $no=> $p)
+        <tr>
+        <th scope="row"><?php echo ++$no + ($reg->currentPage()-1)*$reg->perPage() ?></th>
+        <td>{{ $p->nim}}</td>
+        <td>{{ $p->name}}</td>
+        <td>{{ $p->sts_prakp}}</td>
+        <td>{{ $p->sts_kp}}</td>
+        <td>
             
-        </div>
+        </td>
+        </tr>
+        </tbody>
+        @endforeach
+        </table>
+        <!-- End Table -->
+
+
+        <!-- Pagination -->
+        <!-- Total Data Jadwal: @php echo $reg->total() @endphp -->
+        @php echo $reg->links() @endphp
+        <!-- End Pagination -->
     </div>
-           
-</div>
-</section>
+    
+    </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
