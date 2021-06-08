@@ -93,6 +93,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="" class="font-weight-bold">Pimpinan</label>
+                        <input type="text" class="form-control" name="pimpinan" id="pimpinan" >
+                    </div>
+
+                    <div class="form-group">
                         <label for="" class="font-weight-bold">Nomor Telepon</label>
                         <input type="text" class="form-control" name="no_tlp" id="no_tlp" >
                     </div>

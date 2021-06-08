@@ -31,6 +31,7 @@ class MahasiswaController extends Controller
             'tahun' => $request -> tahun,
             'nim' => $request -> nim,
             'lembaga' => $request -> lembaga,
+            'pimpinan' => $request -> pimpinan,
             'no_tlp' => $request -> no_tlp,
             'alamat' => $request -> alamat,
             'fax' => $request -> fax,

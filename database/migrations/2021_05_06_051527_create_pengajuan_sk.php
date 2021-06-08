@@ -19,6 +19,7 @@ class CreatePengajuanSk extends Migration
             $table->string('tahun');
             $table->string('nim');
             $table->string('lembaga');
+            $table->string('pimpinan');
             $table->string('no_tlp');
             $table->string('alamat');
             $table->string('fax');

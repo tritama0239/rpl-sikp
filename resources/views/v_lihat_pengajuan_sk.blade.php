@@ -76,6 +76,7 @@
         <th>Tahun</th>
         <th>NIM</th>
         <th>Lembaga</th>
+        <th>Pimpinan</th>
         <th>Nomor Telepon</th>
         <th>Alamat</th>
         <th>Fax</th>
@@ -94,6 +95,7 @@
         <td>{{ $p->tahun}}</td>
         <td>{{ $p->nim}}</td>
         <td>{{ $p->lembaga}}</td>
+        <td>{{ $p->pimpinan}}</td>
         <td>{{ $p->no_tlp}}</td>
         <td>{{ $p->alamat}}</td>
         <td>{{ $p->fax}}</td>
