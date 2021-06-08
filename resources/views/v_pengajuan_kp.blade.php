@@ -183,7 +183,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Jadwal Ujian</label>
-                        <input type="date" class="form-control" name="jdwl_ujian" id="jdwl_ujian" >
+                        <input type="hidden" class="form-control" name="jdwl_ujian" id="jdwl_ujian" value="-" readonly>
                     </div>
 
                     <div class="form-group">

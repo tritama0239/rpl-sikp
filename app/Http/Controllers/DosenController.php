@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\jadwal_ujian;
 use App\daftar_bimbingan;
+use App\pengajuan_kp;
 
 class DosenController extends Controller
 {
@@ -40,5 +41,18 @@ class DosenController extends Controller
         where('nim','like',"%".$cari."%")
         ->paginate();
         return view('v_lihat_bimbingan',['bim' => $bim]);
+    }
+
+    public function editbim($id) {
+        $bim = pengajuan_kp::find($id);
+        return view('v_ajukan_jdwl_dsn', ['bim' => $bim]);
+    }
+
+    public function updatebim($id, Request $request) {
+        $bim = pengajuan_kp::find($id);
+        $bim->jdwl_ujian = $request->jdwl_ujian;
+        $bim->save();
+        
+     return redirect("/dosen/daftar_bimbingan/lihatbimbingan");
     }
 }

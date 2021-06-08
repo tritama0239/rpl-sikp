@@ -88,3 +88,5 @@ Route::get('/dosen/jadwal_ujian/lihatjdwl', 'App\Http\Controllers\DosenControlle
 Route::get('/dosen/jadwal_ujian/searchjdwl', 'App\Http\Controllers\DosenController@searchjdwl')->name('searchjdwl');
 Route::get('/dosen/daftar_bimbingan/lihatbimbingan', 'App\Http\Controllers\DosenController@lihatbimbingan')->name('lihatbimbingan');
 Route::get('/dosen/daftar_bimbingan/searchbimbingan', 'App\Http\Controllers\DosenController@searchbimbingan')->name('searchbimbingan');
+Route::get('/dosen/daftar_bimbingan/editbim/{id}', 'App\Http\Controllers\DosenController@editbim')->name('editbim');
+Route::put('/dosen/daftar_bimbingan/updatebim/{id}', 'App\Http\Controllers\DosenController@updatebim')->name('updatebim');

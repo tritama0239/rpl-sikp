@@ -152,7 +152,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Penguji</label>
+                        <label for="" class="font-weight-bold"></label>
                         <input type="hidden" class="form-control" name="penguji" id="penguji" value="-" readonly>
                     </div>
 

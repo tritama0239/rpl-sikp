@@ -64,7 +64,6 @@
                 <div class="form-group">
                         <label for="" class="font-weight-bold">Semester</label>
                         <select class="form-control" name="semester" id="semester">
-                            <option>----</option>
                             <option selected="selected" value="ganjil">Ganjil</option>
                             <option value="genap">Genap</option>
                         </select>
@@ -73,7 +72,6 @@
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Tahun Ajaran</label>
                         <select class="form-control" name="tahun" id="tahun">
-                            <option>----</option>
                             <option selected="selected" value="2020/2021">2020/2021</option>
                             <option value="2021/2022">2021/2022</option>
                             <option value="2022/2023">2022/2023</option>
@@ -136,7 +134,7 @@
                         <label for="" class="font-weight-bold">Dokumen</label>
                         <input type="file" class="form-control" name="dokumen" id="dokumen" required='required' multiple >
                         <p style="color: red">Format File yang Diperbolehkan .png | .jpeg | .pdf </p>
-                    </div></form>
+                    </div>
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold"></label>

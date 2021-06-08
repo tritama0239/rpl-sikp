@@ -45,55 +45,44 @@
     </nav>
 
     <section class="jumbotron">
-    <div class="container">
-        <p><h1 align ="center">Daftar Bimbingan Dosen</h1></p><br>
-        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="/dosen/daftar_bimbingan/searchbimbingan">
-        <h1 class="mt-2 mr-3 text-muted">Search</h1>
-        <input class="form-control mr-sm-2" type="search" name="q" value="@php echo old('cari') @endphp"  placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" data-toggle="tooltip" title="Search">Cari<i class="fas fa-search" ></i></button>
-        </form>
-        <br />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" align="center"><h3>Ajukan Jadwal Ujian Mahasiswa</h3></div>
 
-        <table class="table table-hover">
-        <tr>
-        <th>No</th>
-        <th>ID</th>
-        <th>NIM</th>
-        <th>Nama</th>
-        <th>Pembimbing</th>
-        <th>Judul KP</th>
-        <th>Jadwal Ujian</th>
-        </tr>
+                <div class="card-body">
+                <form method="POST" action="/dosen/daftar_bimbingan/updatebim/{{ $bim->id }}">
+            @csrf
+            @method('PUT')
+            <input type="hidden" class="form-control" name="id" id="id" value="{{ $bim->id }}">
+                <div class="col-md-6">
 
-        <!--@php
-        $no=1;
-        @endphp-->
-        @foreach($bim as $no=> $p)
-        <tr>
-        <th scope="row"><?php echo ++$no + ($bim->currentPage()-1)*$bim->perPage() ?></th>
-        <td>{{ $p->id}}</td>
-        <td>{{ $p->nim}}</td>
-        <td>{{ $p->name}}</td>
-        <td>{{ $p->pembimbing}}</td>
-        <td>{{ $p->judul_kp}}</td>
-        <td>{{ $p->jdwl_ujian}}</td>
-        <td>
-            <a href="/dosen/daftar_bimbingan/editbim/{{ $p->id }}" class="btn btn-success" data-toggle="tooltip" title="Edit" >Ajukan Jadwal</i></a>
-        </td>
-        </tr>
-        </tbody>
-        @endforeach
-        </table>
-        <!-- End Table -->
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">NIM</label>
+                        <input type="text" class="form-control" name="nim" id="nim" value="{{ $bim->nim }}" disabled >
+                    </div>
 
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Jadwal Ujian</label>
+                        <input type="date" class="form-control" name="jdwl_ujian" id="jdwl_ujian" value="{{ $bim->jdwl_ujian }}"  >
+                    </div>
+                    
 
-        <!-- Pagination -->
-        <!-- Total Data Jadwal: @php echo $bim->total() @endphp -->
-        @php echo $bim->links() @endphp
-        <!-- End Pagination -->
+                </div>
+
+            </div>
+                
+                <button type="submit" class="btn btn-primary">Confirm</button>
+            </form>
+            <!-- End Form -->
+            
+        </div>
     </div>
-        
-    </section>
+           
+</div>
+</section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
+
