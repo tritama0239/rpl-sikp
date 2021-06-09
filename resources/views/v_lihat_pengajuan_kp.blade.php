@@ -81,6 +81,7 @@
         <th>Tools</th>
         <th>Spesifikasi</th>
         <th>Dokumen</th>
+        <th></th>
         <th>Penguji</th>
         <th>Ruang</th>
         <th>Lembaga</th>
@@ -108,6 +109,9 @@
         <td>{{ $p->tools}}</td>
         <td>{{ $p->spesifikasi}}</td>
         <td>{{ $p->dokumen}}</td>
+        <td>
+            <a href="/koordinator/pengajuan_kp/opendokumen/{{$p->dokumen }}" target="_blank" class="btn btn-primary">View<span class="glyphicon glyphicon-eye-open"></a>
+        </td>
         <td>{{ $p->penguji}}</td>
         <td>{{ $p->ruang}}</td>
         <td>{{ $p->lembaga}}</td>

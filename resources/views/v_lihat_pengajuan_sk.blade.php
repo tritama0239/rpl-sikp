@@ -81,6 +81,7 @@
         <th>Alamat</th>
         <th>Fax</th>
         <th>Dokumen</th>
+        <th></th>
         <th>Status Verifikasi</th>
         </tr>
 
@@ -100,6 +101,9 @@
         <td>{{ $p->alamat}}</td>
         <td>{{ $p->fax}}</td>
         <td>{{ $p->dokumen}}</td>
+        <td>
+            <a href="/koordinator/pengajuan_sk/opendokumen/{{$p->dokumen }}" target="_blank" class="btn btn-primary">View<span class="glyphicon glyphicon-eye-open"></a>
+        </td>
         <td>{{ $p->sts_verif}}</td>
         <td>
             <a href="/koordinator/pengajuan_sk/editsk/{{ $p->id }}" class="btn btn-success" data-toggle="tooltip" title="Edit" >Verifikasi</i></a>

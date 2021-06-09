@@ -123,17 +123,17 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script type="text/javascript">
             function autoisi(){
-                var nim = $("#nim").val();
+                $nim = $nim.val();
                 $.ajax({
                     url: 'ajax.php',
-                    data:"nim="+nim ,
+                    data:"nim="+ $nim ,
                 }).success(function (data) {
                     var json = data,
                     obj = JSON.parse(json);
-                    $('#name').val(obj.name);
-                    $('#ruang').val(obj.ruang);
-                    $('#penguji').val(obj.penguji);
-                    $('#jdwl_ujian').val(obj.jdwl_ujian);
+                    $name.val(obj.name);
+                    $ruang.val(obj.ruang);
+                    $penguji.val(obj.penguji);
+                    $jdwl_ujian.val(obj.jdwl_ujian);
                 });
             }
             </script>

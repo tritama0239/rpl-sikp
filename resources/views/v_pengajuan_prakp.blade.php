@@ -152,7 +152,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold"></label>
                         <input type="hidden" class="form-control" name="penguji" id="penguji" value="-" readonly>
                     </div>
 
@@ -163,7 +162,7 @@
 
                    <div class="form-group">
                         <label for="" class="font-weight-bold">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" id="alamat" >
+                        <input type="textarea" class="form-control" name="alamat" id="alamat" >
                     </div>
                     
                     <div class="form-group">
@@ -172,7 +171,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold"></label>
                         <input type="hidden" class="form-control" name="sts_verif" id="sts_verif" value="Belum Diverifikasi" readonly>
                     </div>
 

@@ -207,4 +207,14 @@ class KoordinatorController extends Controller
      return redirect("/koordinator/batas_pelaksanaan/lihatbatas");
     }
 
+    //============================================================//
+
+    public function opendokumen($dokumen)
+    {
+        $path = public_path('dokumen/' . $dokumen );
+        header("Content-type: application/pdf");
+        header("Content-Length: " . filesize($path));
+        readfile($path);
+    }
+
 }

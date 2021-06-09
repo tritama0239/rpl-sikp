@@ -56,16 +56,19 @@ Route::get('/koordinator/pengajuan_sk/lihatsk', 'App\Http\Controllers\Koordinato
 Route::get('/koordinator/pengajuan_sk/editsk/{id}', 'App\Http\Controllers\KoordinatorController@editsk')->name('editsk');
 Route::put('/koordinator/pengajuan_sk/updatesk/{id}', 'App\Http\Controllers\KoordinatorController@updatesk')->name('updatesk');
 Route::get('/koordinator/pengajuan_sk/searchsk', 'App\Http\Controllers\KoordinatorController@searchsk')->name('searchsk');
+Route::get('/koordinator/pengajuan_sk/opendokumen/{dokumen}', 'App\Http\Controllers\KoordinatorController@opendokumen')->name('opendokumen');
 
 Route::get('/koordinator/pengajuan_prakp/lihatprakp', 'App\Http\Controllers\KoordinatorController@lihatprakp')->name('lihatprakp');
 Route::get('/koordinator/pengajuan_prakp/editprakp/{id}', 'App\Http\Controllers\KoordinatorController@editprakp')->name('editprakp');
 Route::put('/koordinator/pengajuan_prakp/updateprakp/{id}', 'App\Http\Controllers\KoordinatorController@updateprakp')->name('updateprakp');
 Route::get('/koordinator/pengajuan_prakp/searchprakp', 'App\Http\Controllers\KoordinatorController@searchprakp')->name('searchprakp');
+Route::get('/koordinator/pengajuan_prakp/opendokumen/{dokumen}', 'App\Http\Controllers\KoordinatorController@opendokumen')->name('opendokumen');
 
 Route::get('/koordinator/pengajuan_kp/lihatkp', 'App\Http\Controllers\KoordinatorController@lihatkp')->name('lihatkp');
 Route::get('/koordinator/pengajuan_kp/editkp/{id}', 'App\Http\Controllers\KoordinatorController@editkp')->name('editkp');
 Route::put('/koordinator/pengajuan_kp/updatekp/{id}', 'App\Http\Controllers\KoordinatorController@updatekp')->name('updatekp');
 Route::get('/koordinator/pengajuan_kp/searchkp', 'App\Http\Controllers\KoordinatorController@searchkp')->name('searchkp');
+Route::get('/koordinator/pengajuan_kp/opendokumen/{dokumen}', 'App\Http\Controllers\KoordinatorController@opendokumen')->name('opendokumen');
 
 Route::get('/koordinator/jadwal_ujian/tambahjdwl', 'App\Http\Controllers\KoordinatorController@tambahjdwl')->name('tambahjdwl');
 Route::post('/koordinator/jadwal_ujian/simpanjdwl', 'App\Http\Controllers\KoordinatorController@simpanjdwl')->name('simpanjdwl');

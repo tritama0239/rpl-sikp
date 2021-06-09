@@ -157,7 +157,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Penguji</label>
                         <input type="hidden" class="form-control" name="penguji" id="penguji" value="-" readonly>
                     </div>
 
@@ -168,7 +167,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" id="alamat" >
+                        <input type="textarea" class="form-control" name="alamat" id="alamat" >
                     </div>
                     
                     <div class="form-group">
@@ -177,17 +176,15 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Ujian</label>
                         <input type="hidden" class="form-control" name="sts_ujian" id="sts_ujian" value="Belum Ujian" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Jadwal Ujian</label>
-                        <input type="hidden" class="form-control" name="jdwl_ujian" id="jdwl_ujian" value="-" readonly>
+                        <input type="hidden" class="form-control" name="jdwl_ujian" id="jdwl_ujian" value='2021-12-01' readonly>
                     </div>
 
                     <div class="form-group">
-                        <input type="hidden" class="form-control" name="bts_pelaksanaan" id="bts_pelaksanaan" value="-" readonly>
+                        <input type="hidden" class="form-control" name="bts_pelaksanaan" id="bts_pelaksanaan" value='2021-12-01' readonly>
                     </div>
 
                     <div class="form-group">

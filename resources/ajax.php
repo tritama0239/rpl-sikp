@@ -1,7 +1,7 @@
 <?php
 
 //membuat koneksi ke database
-$koneksi = mysqli_connect("127.0.0.1:8000", "root", "", "db_rpl_sikp");
+$koneksi = include '.env';
 
 //variabel nim yang dikirimkan form.php
 $nim = $_GET['nim'];

@@ -104,7 +104,7 @@
 
                     <div class="form-group">
                         <label for="" class="font-weight-bold">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" id="alamat" >
+                        <input type="textarea" class="form-control" name="alamat" id="alamat" >
                     </div>
 
                     <div class="form-group">
