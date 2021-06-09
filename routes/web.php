@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('google', function () {
+    return view('googleAuth');
+});
+
+Route::get('redirect/{driver}', 'App\Http\Controllers\Auth\LoginController@redirectToProvider')->name('redirectToProvider');
+Route::get('{driver}/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback')->name('handleProviderCallback');
+
 Route::get('/', function () {
     return view('welcome');
 });
