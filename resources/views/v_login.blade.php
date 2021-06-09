@@ -53,9 +53,10 @@
                             </div>
                         </div>
                         <br>
-                        <a href="{{ route('redirectToProvider', 'google') }}" class="col-md-2 btn btn-primary offset-md-5">
-                                    <p>Google</p>
-                                </a>
+                        <section class="jumbotron text-center">
+                        <a class="navbar-brand" href="{{ route('redirectToProvider', 'google') }}"><img src="{{ asset('image/login.png') }}" alt="" width="180" height="40"/></a>
+                        </section>
+                        </br>
                     </form>
                 </div>
             </div>

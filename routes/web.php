@@ -32,15 +32,15 @@ Route::get('logout','App\Http\Controllers\AuthController@logout')->name('logout'
 
 Route::group(['middleware' =>['auth']], function(){
     Route::group(['middleware' => ['cek_login:koordinator']], function(){
-        Route::get('koordinator', 'App\Http\Controllers\KoordinatorController@index')->name('koordinator');
+        Route::get('/koordinator', 'App\Http\Controllers\KoordinatorController@index')->name('v_koordinator');
     });
 
     Route::group(['middleware' => ['cek_login:dosen']], function(){
-        Route::get('dosen', 'App\Http\Controllers\DosenController@index')->name('dosen');
+        Route::get('/dosen', 'App\Http\Controllers\DosenController@index')->name('v_dosen');
     });
 
     Route::group(['middleware' => ['cek_login:mahasiswa']], function(){
-        Route::get('mahasiswa', 'App\Http\Controllers\MahasiswaController@index')->name('v_mahasiswa');
+        Route::get('/mahasiswa', 'App\Http\Controllers\MahasiswaController@index')->name('v_mahasiswa');
     });
 });
 Auth::routes();

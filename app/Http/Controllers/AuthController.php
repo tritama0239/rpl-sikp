@@ -26,11 +26,11 @@ class AuthController extends Controller
             if(Auth::attempt($kredensil)){
                 $user = Auth::user();
                 if($user->substr($email, -10) == "@gmail.com"){
-                    return redirect()->intended('koordinator');
+                    return redirect()->intended('/koordinator');
                 } elseif($user->substr($email, -15) == "@staff.ukdw.ac.id"){
-                    return redirect()->intended('dosen');
+                    return redirect()->intended('/dosen');
                 } elseif($user->substr($email, -11) == "@si.ukdw.ac.id"){
-                    return redirect()->intended('mahasiswa');
+                    return redirect()->intended('/mahasiswa');
                 }
                 return redirect()->intended('/');
             }
