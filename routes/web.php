@@ -45,7 +45,7 @@ Route::group(['middleware' =>['auth']], function(){
 });
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/mahasiswa/pengajuan_sk/tambah', 'App\Http\Controllers\MahasiswaController@tambah')->name('tambah');
 Route::post('/mahasiswa/pengajuan_sk/simpan', 'App\Http\Controllers\MahasiswaController@simpan')->name('simpan');

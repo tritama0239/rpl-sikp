@@ -38,7 +38,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/koordinator/jadwal_ujian/lihatregis') }}">List Registrasi</a>
+                        <a class="nav-link" href="{{url('/koordinator/list_registrasi/lihatregis') }}">List Registrasi</a>
                     </li>
 
                     <li class="nav-item">
