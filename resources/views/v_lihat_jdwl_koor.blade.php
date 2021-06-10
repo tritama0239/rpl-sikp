@@ -99,7 +99,7 @@
         <td>{{ $p->jam_mulai}}</td>
         <td>{{ $p->jam_slsai}}</td>
         <td>
-            
+            <a href="/koordinator/jadwal_ujian/editjdwl/{{ $p->id }}" class="btn btn-success" data-toggle="tooltip" title="Edit" >Edit</i></a>
         </td>
         </tr>
         </tbody>

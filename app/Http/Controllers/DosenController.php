@@ -44,12 +44,12 @@ class DosenController extends Controller
     }
 
     public function editbim($id) {
-        $bim = pengajuan_kp::find($id);
+        $bim = jadwal_ujian::find($id);
         return view('v_ajukan_jdwl_dsn', ['bim' => $bim]);
     }
 
     public function updatebim($id, Request $request) {
-        $bim = pengajuan_kp::find($id);
+        $bim = jadwal_ujian::find($id);
         $bim->jdwl_ujian = $request->jdwl_ujian;
         $bim->save();
         

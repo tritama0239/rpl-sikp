@@ -84,7 +84,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="font-weight-bold">Status Pra KP</label>
                         <input type="hidden" class="form-control" name="sts_prakp" id="sts_prakp" value="-" readonly>
                     </div>
 

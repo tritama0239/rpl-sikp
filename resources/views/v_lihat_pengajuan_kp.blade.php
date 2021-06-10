@@ -75,7 +75,7 @@
         <th>Semester</th>
         <th>Tahun</th>
         <th>Judul KP</th>
-        <th>Status Pra KP</th>
+        <th>Status KP</th>
         <th>NIM</th>
         <th>NIK</th>
         <th>Tools</th>
